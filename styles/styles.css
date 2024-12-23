@@ -19,16 +19,15 @@ body {
     color: white;
 }
 
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-   
+.container {
+    max-width: 90%; /* Занимает 90% ширины экрана */
+    margin: 0 auto; /* Центрирование */
 }
 
 .button {
     background-color: white;
     border-radius: 40px; 
-    width: 178px;
+    width: 50%; /* Относительная ширина */
     height: 58px;
     box-sizing: border-box;
     padding: 18px;
@@ -49,16 +48,17 @@ body {
     background-color: #eee;
 }
 
-.button.violet-button:hover{
-    background-color: #3b2cd8
+.button.violet-button:hover {
+    background-color: #3b2cd8;
 }
 
 li {
     font-size: 20px;
 }
+
 .common-title {
     font-family: 'Steppe-ExtraBold', sans-serif;
-    font-size: 60px;
+    font-size: 5vw; /* Относительный размер шрифта */
     margin-top: 60px;
     line-height: 100%;
     text-align: center;
@@ -102,11 +102,6 @@ li {
     }
 }
 
-
-
-
-
-
 .login {
     position: absolute;
     right: 20px;
@@ -117,13 +112,6 @@ li {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
 .header {
     padding: 40px 0;
 }
@@ -133,25 +121,22 @@ li {
     align-items: center;
 }
 
-
-
-
-
+.container1 {
+    max-width: 100%; /* Максимальная ширина 100% от родительского элемента */
+    width: 100%; /* Занимает всю доступную ширину */
+}
 
 .list {
     margin-top: 20px;
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 18px;
-    width: 1200px;
-    
-    
     background-color: #f0f0f0;
     color: #5243f4;
 }
 
 .list img {
-    width: 545px;
-    height: 2200px;
+    width: 100%; /* Адаптивное изображение */
+    height: auto; /* Сохраняет пропорции */
 }
 
 .list div {
@@ -160,7 +145,6 @@ li {
 
 .list li {
     margin: 5px;
-    /* text-align: center; */
 }
 
 .list-item {
@@ -169,30 +153,6 @@ li {
     gap: 20px;
 }
 
-.list-text {
-    width: 1200px;
-}
-
-/* .list-text li {
-    position: absolute;
-    right: 0;
-} */
-
-/* .list-text li {
-    position: absolute; 
-    right: 0; font-family: 'Steppe-ExtraBold', sans-serif; 
-    color: #fff; 
-    font-size: 24px; 
-    margin-bottom: 10px;
-} */
-
-
-
-
-
-
-
-
 /* Стили для модального окна */
 .modal {
     display: none; /* Скрыто по умолчанию */
@@ -200,23 +160,28 @@ li {
     z-index: 1;
     left: 0;
     top: 0;
-    width: 400px;
-    height: 400px;
-    /* width: 100%;
-    height: 100%; */
-    overflow: auto;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */ 
+    overflow: auto; /* Прокрутка, если нужно */
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
 }
 
-/* .modal-content {
+.modal-content {
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание */
+    justify-content: space-between; /* Распределение пространства */
     background-color: #fefefe;
-    margin: 15% auto; /* Центрирование 
+    margin: 15% auto; /* Центрирование */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
-    max-width: 500px;  
-    border-radius: 5px;  
-} */
+    width: 400px; /* Ширина модального окна */
+    text-align: center;
+    height: 400px; /* Задайте высоту модального окна */
+}
+
+.modal-buttons {
+    margin-top: auto; /* Отодвигает кнопки вниз */
+}
 
 .close {
     color: #aaa;
@@ -231,13 +196,6 @@ li {
     text-decoration: none;
     cursor: pointer;
 }
-
-
-
-
-
-
-
 
 .links {
     margin-top: 30px;
@@ -258,7 +216,7 @@ li {
     gap: 50px;
 }
 
-.menu-item  a {
+.menu-item a {
     font-size: 16px;
     line-height: 130%;
     text-decoration: none;
@@ -266,17 +224,9 @@ li {
     color: white;
 }
 
-.menu-item  a:hover {
+.menu-item a:hover {
     border-bottom: 2px solid white;
 }
-
-
-
-
-
-
-
-
 
 .main-content {
     padding-top: 161px;
@@ -286,10 +236,10 @@ li {
 .main-info {
     max-width: 811px;
 }
-    
+
 .main-title {
     font-family: 'Steppe-ExtraBold', sans-serif;
-    font-size: 90px;
+    font-size: 5vw; /* Относительный размер шрифта */
     line-height: 100%;
     margin-bottom: 20px;
 }
@@ -308,13 +258,6 @@ li {
     z-index: -1;
 }
 
-
-
-
-
-
-
-
 .product {
     padding: 100px 0;
     position: relative;
@@ -322,18 +265,13 @@ li {
 
 .products-items {
     display: grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Адаптивные колонки */
     gap: 60px 24px;
     margin-top: 60px;
-    /* margin-bottom: 50px; */
 }
 
 .products-item {
-
-    width: 360px;
-    height: 450px;
     background-color: #eee;
-    /* background-color: #808080; */
     color: #5D3427;
 }
 
@@ -347,10 +285,8 @@ li {
 }
 
 .products-item-image img {
-    height: 262px;
-    top: 0px;
-    position: relative;
-    max-width: 100%;
+    height: 100%; /* Адаптивное изображение */
+    max-width: 100%; /* Сохраняет пропорции */
 }
 
 .products-item-details {
@@ -370,7 +306,7 @@ li {
     margin-bottom: 20px;
 }
 
-.products-item-extra{
+.products-item-extra {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -383,46 +319,94 @@ li {
     margin-bottom: 10px;
 }
 
-.products-item-weight{
+.products-item-weight {
     padding-left: 2px;
     font-size: 12px;
 }
-.products-item-info {
-    display: inline-block;
-}
 
 .plusm {
-    width: 360px;
+    width: 100%; /* Полная ширина */
     height: 450px;
     background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый цвет */
     backdrop-filter: blur(10px);
 }
 
 .plus {
-    margin-top: 175px;
-    display: grid;
-    place-items: center; 
-    /* display: flex; */
+    padding-top: 160px; 
+    display: grid; 
+    text-align: center;  
+    place-items: center;
     font-size: 80px;
-    text-align: center; 
-    vertical-align: bottom;
     cursor: pointer;
 }
 
+.container2 {
+    text-align: center;
+    margin-top: 50px;
+}
 
+.open-modal {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Открывается поверх всего */
+    z-index: 1; /* На переднем плане */
+    left:     0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */ 
+    overflow: auto; /* Прокрутка, если нужно */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
 
+.modal-content {
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание */
+    justify-content: space-between; /* Распределение пространства */
+    background-color: #fefefe;
+    margin: 15% auto; /* Центрирование */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px; /* Ширина модального окна */
+    text-align: center;
+    height: 400px; /* Задайте высоту модального окна */
+}
 
+.modal-buttons {
+    margin-top: auto; /* Отодвигает кнопки вниз */
+}
 
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .love {
     padding: 64px 0 150px 0;
 }
 
-.love-items{
+.love-items {
     margin-top: 40px;
     display: flex;
     gap: 20px;
+    text-align: center;
 }
 
 ul {
@@ -430,9 +414,9 @@ ul {
 }
 
 .love-item {
-
     width: 550px;
     height: 500px;
+
 }
 
 .love-item-white {
@@ -455,8 +439,8 @@ ul {
 }
 
 .love-item-image img {
-    width: 550px;
-    height: 500px;
+    width: 100%; /* Адаптивное изображение */
+    height: auto; /* Сохраняет пропорции */
 }
 
 .order {
@@ -476,7 +460,7 @@ ul {
 }
 
 .order-form {
-    margin-left: 200px;
+    margin-left: 20px; /* Уменьшите отступ для мобильных устройств */
     max-width: 387px;
     padding: 40px 0 44px 0;
     box-sizing: border-box;
@@ -500,7 +484,7 @@ ul {
     margin-bottom: 16px;
     padding: 24px 22px;
     font-size: 18px;
-    width: 385px;
+    width: 100%; /* Полная ширина */
     height: 68px;
     background: transparent;
     box-sizing: border-box;
@@ -513,13 +497,13 @@ ul {
 }
 
 .order-form-inputs .button.violet-button {
-    width: 387px;
+    width: 100%; /* Полная ширина */
     height: 71px;
 }
 
 .order-form-image {
     height: 501px;
-    margin-left: 109px;
+    margin-left: 20px; /* Уменьшите отступ для мобильных устройств */
 }
 
 .order-image {
@@ -540,8 +524,6 @@ ul {
     margin-top: 20px;
 }
 
-
-
 .footer {
     padding: 126px 0 50px 0;
     text-align: center;
@@ -560,8 +542,7 @@ ul {
     align-items: center;
 }
 
-
-
+/* Медиа-запросы для адаптивности */
 @media (max-width: 1200px) {
    
     .products-items {
@@ -680,4 +661,3 @@ ul {
     }
 
 }
-
