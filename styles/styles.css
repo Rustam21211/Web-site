@@ -553,30 +553,131 @@ ul {
     line-height: 130%;
 }
 
-.line1 {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: calc(100% - 960px);
-}
-
-.line2 {
-    position: absolute;
-    z-index: -1;
-    top: -40px;
-    left: 0;
-}
-
-.line3 {
-    position: absolute;
-    z-index: -1;
-    top: -920px;
-    left: 0;
-}
-
 .qq {
     padding-right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+
+
+@media (max-width: 1200px) {
+   
+    .products-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на средних экранах */
+    }
+
+    .main-title {
+        font-size: 6vw; /* Увеличьте размер шрифта на средних экранах */
+    }
+
+    .menu {
+        margin-left: 50px; /* Уменьшите отступ для меню */
+    }
+
+    .common-title {
+        font-size: 40px; /* Уменьшите размер заголовка */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-items {
+        grid-template-columns: 1fr; /* 1 колонка на малых экранах */
+    }
+
+    .menu {
+        margin-left: 20px; /* Уменьшите отступ для меню */
+    }
+
+    .main-title {
+        font-size: 8vw; /* Увеличьте размер шрифта на малых экранах */
+    }
+
+    .button {
+        width: 80%; /* Кнопка занимает 80% ширины на малых экранах */
+    }
+
+    .order-form {
+        margin-left: 0; /* Уберите отступ для мобильных устройств */
+    }
+
+    .order-form-image {
+        display: none; /* Скрыть изображение на малых экранах */
+    }
+
+    .love-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .love-item {
+        height: auto;
+        text-align: center;
+    }
+
+    .love-item img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .container {
+        flex-direction: column; /* Вертикальное выравнивание для заголовка */
+    }
+
+    .currency {
+        right: 20px; /* Измените позицию для меньших экранов */
+        bottom: 20px; /* Измените позицию для меньших экранов */
+    }
+
+    .login {
+        right: 10px; /* Измените позицию для меньших экранов */
+        top: 10px; /* Измените позицию для меньших экранов */
+    }
+
+    .menu-list {
+        flex-direction: column; /* Вертикальное выравнивание для меню */
+        gap: 10px; /* Уменьшите промежуток между элементами меню */
+    }
+
+    .footer {
+        padding: 50px 0; /* Уменьшите отступ в подвале */
+    }
+
+    .rights {
+        font-size: 14px; /* Уменьшите размер текста в подвале */
+    }
+
+    .main-title {
+        font-size: 10vw; /* Увеличьте размер шрифта на очень малых экранах */
+    }
+
+    .main-text {
+        font-size: 16px; /* Уменьшите размер текста на очень малых экранах */
+    }
+
+    .button {
+        width: 100%; /* Полная ширина кнопок на очень малых экранах */
+    }
+
+    .order-form-inputs input {
+        width: 100%; /* Полная ширина для полей ввода */
+    }
+
+    .love-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .love-item {
+        height: auto;
+        text-align: center;
+    }
+
+    .love-item img {
+        max-width: 100%;
+    }
+
+}
+
