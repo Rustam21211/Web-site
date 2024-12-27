@@ -5,3 +5,13 @@ for (let i = 0; i < links.length; i++) {
     }
 }
 // alert(1111);
+
+
+window.onload = function() {
+    // Получаем ширину области просмотра
+    const viewportWidth = window.innerWidth;
+
+    // Находим элемент на странице, куда будем выводить ширину
+    const widthDisplay = document.getElementById('screenWidth');
+    widthDisplay.textContent = "Ширина области просмотра: " + viewportWidth + " пикселей";
+};
