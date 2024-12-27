@@ -542,6 +542,11 @@ ul {
     align-items: center;
 }
 
+#screenWidth {
+    font-size: 20px;
+    color: #333;
+}
+
 /* Медиа-запросы для адаптивности */
 @media (max-width: 1200px) {
    
