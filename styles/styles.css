@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: #5423f4;    
+    background-color: #1c6e0a;    
     font-family: 'Steppe-Book', sans-serif;
     color: white;
 }
@@ -27,10 +27,11 @@ body {
 .button {
     background-color: white;
     border-radius: 40px; 
-    width: 50%; /* Относительная ширина */
+    width: 180px; /* Относительная ширина */
     height: 58px;
     box-sizing: border-box;
     padding: 18px;
+    margin: 10px;
     text-align: center;
     font-size: 18px;
     color: #5423f4;
@@ -51,22 +52,27 @@ body {
 .button.violet-button:hover {
     background-color: #3b2cd8;
 }
-
-li {
-    font-size: 20px;
-}
-
 .common-title {
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 5vw; /* Относительный размер шрифта */
+    margin-bottom: 20px;
     margin-top: 60px;
     line-height: 100%;
     text-align: center;
 }
 
+li {
+    font-size: 20px;
+}
+li .text {
+    width: 300px;
+}
+
+
 .main {
     position: relative;
     overflow: hidden;
+    justify-content: center;
 }
 
 .currency {
@@ -120,37 +126,49 @@ li {
     display: flex;
     align-items: center;
 }
+.love-item {
+    margin-top: 60px;  
+}
+
 
 .container1 {
     max-width: 100%; /* Максимальная ширина 100% от родительского элемента */
     width: 100%; /* Занимает всю доступную ширину */
+    margin-bottom: 30px;
 }
-
 .list {
-    margin-top: 20px;
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 18px;
-    background-color: #f0f0f0;
+    /* margin-top: 60px; */
+    background-color: #fff;
     color: #5243f4;
+    max-width: 1800px;
+    /* max-width: 1200px; */
+    margin: auto;
+    padding: 0;
+    list-style: none;
 }
-
-.list img {
-    width: 100%; /* Адаптивное изображение */
-    height: auto; /* Сохраняет пропорции */
+/* .list > ul {
+    padding: 0;
 }
-
-.list div {
-    text-decoration: underline;
+.list > ul > li {
+    margin-bottom: 20px;
+    position: relative;
 }
-
-.list li {
-    margin: 5px;
-}
-
-.list-item {
-    display: flex;
-    margin-top: 30px;
-    gap: 20px;
+.list > ul > li > ul {
+    padding-left: 20px;
+} */
+/* .list > ul > li > ul > li{
+    margin-left: 20px;
+    position: relative;
+} */
+.price {
+    position: absolute;
+    right: 10px;
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    /* color: #fff; */
+    color: #5243f4;
+    font-size: 24px;
 }
 
 /* Стили для модального окна */
@@ -439,85 +457,20 @@ ul {
 }
 
 .love-item-image img {
-    width: 100%; /* Адаптивное изображение */
-    height: auto; /* Сохраняет пропорции */
+    height: 500px;
+    width: auto;
+
+    /* width: 100%; 
+    height: auto;  */
 }
 
-.order {
-    padding-bottom: 102px;
-    position: relative;
-}
 
-.order .container {
-    position: relative;
-}
-
-.order-block {
-    margin-top: 103px;
-    background-color: rgb(255 255 255 / 30%);
-    backdrop-filter: blur(50px);
-    display: flex;
-}
-
-.order-form {
-    margin-left: 20px; /* Уменьшите отступ для мобильных устройств */
-    max-width: 387px;
-    padding: 40px 0 44px 0;
-    box-sizing: border-box;
-}
-
-.order-form-text {
-    font-family: 'Steppe-ExtraBold', sans-serif;
-    font-size: 18px;
-    line-height: 130%;
-}
-
-.order-form-inputs {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.order-form-inputs input {
-    border: 1px solid white;
-    border-radius: 60px;
-    margin-bottom: 16px;
-    padding: 24px 22px;
-    font-size: 18px;
-    width: 100%; /* Полная ширина */
-    height: 68px;
-    background: transparent;
-    box-sizing: border-box;
-    outline: none;
-    color: white;
-}
 
 ::placeholder {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.order-form-inputs .button.violet-button {
-    width: 100%; /* Полная ширина */
-    height: 71px;
-}
 
-.order-form-image {
-    height: 501px;
-    margin-left: 20px; /* Уменьшите отступ для мобильных устройств */
-}
-
-.order-image {
-    height: 559px;
-    top: -58px;
-    position: relative;
-}
-
-.order-bg-image {
-    position: absolute;
-    top: 0;
-    right: calc(100% - 810px);
-    z-index: -1;
-}
 
 .links {
     text-align: center;
@@ -547,6 +500,7 @@ ul {
     color: #333;
 }
 
+
 /* Медиа-запросы для адаптивности */
 @media (max-width: 1200px) {
    
@@ -568,28 +522,34 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .products-items {
-        grid-template-columns: 1fr; /* 1 колонка на малых экранах */
-    }
-
-    .menu {
-        margin-left: 20px; /* Уменьшите отступ для меню */
-    }
-
-    .main-title {
-        font-size: 8vw; /* Увеличьте размер шрифта на малых экранах */
+    .container {
+        max-width: 95%; /* Увеличиваем ширину для мобильных устройств */
     }
 
     .button {
-        width: 80%; /* Кнопка занимает 80% ширины на малых экранах */
+        width: 80%; /* Уменьшаем ширину кнопки */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    .common-title {
+        font-size: 6vw; /* Увеличиваем размер шрифта для мобильных устройств */
+    }
+
+    .main-content {
+        padding-top: 100px; /* Уменьшаем отступы */
+        padding-bottom: 100px;
+    }
+
+    .products-items {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Уменьшаем минимальную ширину колонок */
     }
 
     .order-form {
-        margin-left: 0; /* Уберите отступ для мобильных устройств */
+        margin-left: 10px; /* Уменьшаем отступ */
     }
 
-    .order-form-image {
-        display: none; /* Скрыть изображение на малых экранах */
+    .order-form-inputs input {
+        padding: 16px; /* Уменьшаем внутренние отступы */
     }
 
     .love-items {
@@ -602,53 +562,34 @@ ul {
         text-align: center;
     }
 
-    .love-item img {
+    /* .love-item img {
         max-width: 100%;
+    } */
+
+    .footer {
+        padding: 80px 0 30px 0; /* Уменьшаем отступы */
     }
 }
 
 @media (max-width: 480px) {
-    .header .container {
-        flex-direction: column; /* Вертикальное выравнивание для заголовка */
-    }
-
-    .currency {
-        right: 20px; /* Измените позицию для меньших экранов */
-        bottom: 20px; /* Измените позицию для меньших экранов */
-    }
-
-    .login {
-        right: 10px; /* Измените позицию для меньших экранов */
-        top: 10px; /* Измените позицию для меньших экранов */
-    }
-
-    .menu-list {
-        flex-direction: column; /* Вертикальное выравнивание для меню */
-        gap: 10px; /* Уменьшите промежуток между элементами меню */
-    }
-
-    .footer {
-        padding: 50px 0; /* Уменьшите отступ в подвале */
-    }
-
-    .rights {
-        font-size: 14px; /* Уменьшите размер текста в подвале */
-    }
-
-    .main-title {
-        font-size: 10vw; /* Увеличьте размер шрифта на очень малых экранах */
-    }
-
-    .main-text {
-        font-size: 16px; /* Уменьшите размер текста на очень малых экранах */
+    .common-title {
+        font-size: 8vw; /* Увеличиваем размер шрифта для очень маленьких экранов */
     }
 
     .button {
-        width: 100%; /* Полная ширина кнопок на очень малых экранах */
+        height: 50px; /* Уменьшаем высоту кнопки */
     }
 
-    .order-form-inputs input {
-        width: 100%; /* Полная ширина для полей ввода */
+    .products-item-title {
+        font-size: 18px; /* Уменьшаем размер шрифта заголовка товара */
+    }
+
+    .love-item-title {
+        font-size: 30px; /* Уменьшаем размер шрифта заголовка любви */
+    }
+
+    .order-form-image {
+        height: 300px; /* Уменьшаем высоту изображения в форме заказа */
     }
 
     .love-items {
@@ -661,8 +602,29 @@ ul {
         text-align: center;
     }
 
-    .love-item img {
+    /* .love-item img {
         max-width: 100%;
+    } */
+}
+
+/* @media only screen and (max-width: 380px) { */
+@media (max-width: 380px) {
+    .common-title {
+        font-size: 36px; /* Уменьшите размер шрифта для заголовка */
+        margin-top: 30px; /* Уменьшите верхний отступ */
     }
 
+    .container1 {
+        width: 90%; /* Увеличьте ширину контейнера для маленьких экранов */
+        margin-bottom: 20px; /* Уменьшите нижний отступ */
+    }
+
+    .list {
+        font-size: 16px; /* Уменьшите размер шрифта для списка */
+    }
+
+    .price {
+        font-size: 20px; /* Уменьшите размер шрифта для цены */
+        right: 5px; /* Уменьшите отступ справа */
+    }
 }
