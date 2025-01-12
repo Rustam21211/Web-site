@@ -1,0 +1,28 @@
+.f11 {
+    margin-left: 10px;
+    width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
+    overflow-x: auto; /* Добавляет прокрутку по горизонтали, если таблица слишком широка */
+}
+
+table {
+    background-color: white;
+    color: #5423f4;
+    font-family: 'Steppe-ExtraBold', sans-serif;  
+    width: 100%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.price-column {
+    width: 50px; /* Установите желаемую ширину для второго столбца */
+}
