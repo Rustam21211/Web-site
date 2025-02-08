@@ -24,6 +24,18 @@ body {
     margin: 0 auto; /* Центрирование */
 }
 
+.container1 {
+    max-width: 100%; /* Максимальная ширина 100% от родительского элемента */
+    width: 100%; /* Занимает всю доступную ширину */
+    margin-bottom: 30px;
+}
+
+.container2 {
+    text-align: center;
+    max-width: 70%; /* Занимает 90% ширины экрана */
+    margin: 0 auto; 
+}
+
 .button {
     background-color: white;
     border-radius: 40px; 
@@ -131,11 +143,6 @@ li .text {
 }
 
 
-.container1 {
-    max-width: 100%; /* Максимальная ширина 100% от родительского элемента */
-    width: 100%; /* Занимает всю доступную ширину */
-    margin-bottom: 30px;
-}
 .list {
     font-family: 'Steppe-ExtraBold', sans-serif;
     font-size: 18px;
@@ -468,6 +475,23 @@ ul {
 
 ::placeholder {
     color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+.cheque {
+    font-family: 'Steppe-Book', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /* max-width: 100px; */
+}
+.cheque h2 {
+    margin-top: 10px;
+}
+
+.productSelect {
+    margin-top: 20px;
 }
 
 
